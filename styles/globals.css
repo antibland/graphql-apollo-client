@@ -15,6 +15,78 @@ a {
   box-sizing: border-box;
 }
 
+#__next {
+  max-width: 70rem;
+  margin: 10rem auto;
+}
+
+.characterList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.characterCard {
+  max-width: 1000px;
+  display: inline-grid;
+  gap: 0.75rem;
+  grid-template-areas:
+    "header header episodes"
+    "profile profile episodes"
+    "profile profile episodes"
+    "profile profile episodes";
+}
+
+.characterCard .header {
+  grid-area: header;
+  font-size: 2rem;
+}
+
+.characterCard .profile {
+  grid-area: profile;
+}
+
+.characterCard .episodes {
+  grid-area: episodes;
+}
+
+.characterCard .episodes h3 {
+  margin-top: 0.75rem;
+}
+
+.characterCard .episodes .content {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.characterList .characterLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.25rem;
+  overflow: hidden;
+}
+
+.characterLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.characterList .characterNameLink {
+  text-align: center;
+}
+
+.characterList .characterImage {
+  transition: 0.3s transform;
+}
+
+.characterList .characterImage:hover {
+  transform: scale(1.2);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
